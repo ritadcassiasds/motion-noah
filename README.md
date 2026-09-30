@@ -43,6 +43,14 @@ Os PNGs podem ser convertidos para MP4 em qualquer pipeline de vídeo. Exemplo c
 ffmpeg -framerate 30 -i frames/frame-%04d.png -c:v libx264 -pix_fmt yuv420p -movflags +faststart noah-ark-reel.mp4
 ```
 
+Exportação oficial do projeto:
+
+```bash
+npm run render
+```
+
+Esse comando captura 600 frames em 1080×1920 e gera `renders/noah-ark-reels-v1.mp4`. Ele requer o executável FFmpeg disponível no PATH; alternativamente, defina `FFMPEG_PATH` apontando para o executável.
+
 ## Onde editar
 
 1. Textos: altere os títulos e labels diretamente em `index.html`.
