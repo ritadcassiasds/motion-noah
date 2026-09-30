@@ -1,0 +1,9 @@
+{
+  "name": "noah-ark-reels-template",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "preview": "npx serve .",
+    "render:frames": "node render-frames.mjs"
+  }
+}
