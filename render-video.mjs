@@ -2,12 +2,13 @@
 import { mkdir, rm } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
+import ffmpegStatic from 'ffmpeg-static';
 
 const root = process.cwd();
 const frames = path.join(root, '.render-frames');
 const outputDir = path.join(root, 'renders');
 const output = path.join(outputDir, 'noah-ark-reels-v1.mp4');
-const ffmpeg = process.env.FFMPEG_PATH || 'ffmpeg';
+const ffmpeg = process.env.FFMPEG_PATH || ffmpegStatic || 'ffmpeg';
 
 await mkdir(outputDir, { recursive: true });
 await rm(frames, { recursive: true, force: true });
