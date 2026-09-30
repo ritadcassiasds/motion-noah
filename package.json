@@ -5,5 +5,8 @@
   "scripts": {
     "preview": "npx serve .",
     "render:frames": "node render-frames.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
   }
 }
