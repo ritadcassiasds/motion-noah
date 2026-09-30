@@ -1,6 +1,6 @@
 # Noah Ark — template de motion para Reels
 
-Template vertical 1080×1920, 20 segundos, baseado nas telas reais do portal Noah Broker e no `NOAH_MOTION_SYSTEM.md`.
+Template vertical 1080×1920, 20 segundos, baseado nas telas reais do portal Noah Broker e no `NOAH_MOTION_SYSTEM.md`. A versão atual usa a tela real de login, a logo oficial e navegação visual portal → detalhe do imóvel.
 
 ## Estrutura
 
@@ -8,6 +8,8 @@ Template vertical 1080×1920, 20 segundos, baseado nas telas reais do portal Noa
 - `styles.css`: tokens Noah, layout e animações suaves.
 - `app.js`: timeline de 5 cenas, 4 segundos cada.
 - `telas/`: screenshots reais usados como referência visual.
+- `telas/logo-oficial.jpeg`: logo oficial do Grupo Noah.
+- `telas/login-sistema.png`: referência disponível para futuras trocas da tela de login.
 - `render-frames.mjs`: captura PNGs em 1080×1920 para exportação.
 
 ## Preview
@@ -45,7 +47,7 @@ ffmpeg -framerate 30 -i frames/frame-%04d.png -c:v libx264 -pix_fmt yuv420p -mov
 
 1. Textos: altere os títulos e labels diretamente em `index.html`.
 2. Duração: `duration` e a divisão de cenas estão em `app.js`; a duração padrão é 20s.
-3. Screenshots: substitua `telas/portal-inicio.png` no `.portal-strip` ou adicione outras imagens usando os mesmos caminhos.
+3. Screenshots: os módulos usam `lista-de-imoveis.png`, `leads.png` e `edição-detalhes.png`; o portal usa `portal-inicio.png` e `detalhes-imoveis-portal.png`.
 4. Identidade: cores estão nas variáveis do topo de `styles.css`.
 5. Layout: os cards de dashboard, pipeline e módulos são componentes HTML simples, portanto podem receber dados reais sem redesenhar a composição.
 
